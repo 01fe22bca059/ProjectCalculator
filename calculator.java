@@ -1,36 +1,28 @@
 import java.util.Scanner;
-class calculator
-{
-    float addition( float n1, float n2)
-    {
-        return n1 +n2;
+class calculator extends area{
+    void add(int a,int b){
+        System.out.println("Addition "+(a+b));
     }
-    float subtraction(float n1, float n2)
-    {
-        return n1-n2;
+    void substract(int a,int b){
+        System.out.println("Substraction "+(a-b));
     }
-    float multiplication(float n1, float n2)
-    {
-        return n1*n2;
+    void multi(int a,int b){
+        System.out.println("product "+(a*b));
     }
-    float division(float n1,float n2)
-    {
-          return n1/n2;
+    void division(int a,int b){
+        System.out.println("division "+(a/b));
     }
-
-
-public static void main(String args[])
-{
-    Scanner s= new Scanner(System.in);
-    System.out.println("Enter the numbers ");
-
-    calculator c=new calculator();
-float n1=s.nextFloat();
-float n2=s.nextFloat();
-System.out.println("Addition:" + c.addition(n1,n2));
-System.out.println("Subtraction:" + c.subtraction(n1,n2));
-System.out.println("Multiplication:" + c.multiplication(n1,n2));
-System.out.println("Division:" + c.division(n1,n2));
-}
-
+    public static void main(String args[]){
+        System.out.println("Enter two numbers");
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        int b=s.nextInt();
+        calculator c=new calculator();
+        c.add(a,b);
+        c.substract(a,b);
+        c.multi(a,b);
+        c.division(a,b);
+        System.out.println("area of square is "+c.sq_area(3));
+      System.out.println("area of triangle is "+c.tri_area(4,5));
+    }
 }
